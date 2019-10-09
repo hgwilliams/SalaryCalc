@@ -1,22 +1,26 @@
 #!/usr/bin/python3
 
-#salaried = input('Are you on a yearly salary?: ')
+#salaried = input(UPPER('Are you on a yearly salary?: '))
 #taxCode = input('What is your current Tax Code: ')
 #pension = input('What is your current pension Contribution %')
 ################################
+
 ############TEST PARAMETERS##########
-salaried = 'no' # test parameter
-taxCode = '1185l' # test parameter
-hoursPerWeek = 50
+salaried = 'YES'
+salaryGrossPay = 19000
+taxCode = '1185l'
+hoursPerWeek = 37.5
 hourlyRate = 8.7
 pensionPercent = 3
 studentLoanPlan = 'A'
 ###################################
 
 if salaried == 'YES':
-   # overHourlyRate = input('Enter hourly rate: ')
-    salaryGrossPay = input('Enter Salary: ')
-    hoursPerWeek = input('Enter Weekly Hours: ')
+   # overHourlyRate = input('Enter hourly rate: ')   
+    #salaryGrossPay = input('Enter Salary: ')
+    #hoursPerWeek = input('Enter Weekly Hours: ')
+    salaryGrossPay = 19000
+    hoursPerWeek = 37.5
     print(salaryGrossPay)
     grossSalary = salaryGrossPay
 else:
@@ -52,9 +56,11 @@ grossSalaryInt = int(grossSalary)
 ######
 
 if studentLoanPlan == 'A':
-    print('A')
+    print('PLAN A')
 elif studentLoanPlan == 'B':
-    print('B')
+    print('PLAN B')
+elif studentLoanPlan =='POST':
+    print('POSTGRAD PLAN')
 else:
     print('Sudent Loan')
 
