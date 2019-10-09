@@ -42,20 +42,22 @@ else:
                  taxCodeAllowance = int(taxCodeStr)
                  print('Your Tax Free Allowance is: £' + str(taxCodeAllowance)+'0')
                  taxFreeAllowance = taxCodeAllowance
-###################
-###  DEDUCTIONS ###
-###################
 
-penContribAmount = ((int(pensionPercent) / 100) * int(grossSalary))
+#######
+#DEDUCTIONS
+###########
+
+penContribAmount = ((int(pensionPercent) / 100) * int(grossSalary)/12)
 penContrib=(round(penContribAmount,2))
 print('Current pension contributions are: ' + str(penContrib))
 grossSalaryInt = int(grossSalary)
 
 ######
 #Student Loan Calc
-######
+#########
 
 if studentLoanPlan == 'A':
+<<<<<<< HEAD
     print('PLAN A')
 elif studentLoanPlan == 'B':
     print('PLAN B')
@@ -63,9 +65,47 @@ elif studentLoanPlan == 'POST':
     print('POSTGRAD PLAN')
 else:
     print('No Sudent Loan')
+=======
+    if grossSalaryInt > 18935:
+        studentLoanDeductionPercentage = 0
+        SLDeductionAmount = grossSalaryInt
+    else:
+        studentLoanDecuctionPercentage = 9
+        SLDeductionAmount = ((grossSalaryInt / 100) * studentLoanDecuctionPercentage)/12
+        print(SLDeductionAmount)
+    print('A')
 
+elif studentLoanPlan == 'B':
+    if grossSalaryint > 25725:
+        studentLoanDeductionPercentage = 0
+    else:
+        studentLoanDecuctionPercentage = 9
+        SLDeductionAmount = ((grossSalaryInt / 100) * studentLoanDecuctionPercentage)/12
+        print(SLDeductionAmount)
+    print('B')
+else:
+    if grossSalaryint > 21000:
+        studentLoanDeductionPercentage = 0
+    else:
+        studentLoanDeductionPercentage = 6
+        SLDeductionAmount = ((grossSalaryInt / 100) * studentLoanDecuctionPercentage)/12
+        print(SLDeductionAmount)
+    print('Sudent Loan')
+>>>>>>> NI
 
-#taxcalculation
+######
+#N.I Calcs
+#########
+grossWeeklyPay = ((grossSalaryInt / 12)/4)
+if grossWeeklyPay <= 166:
+    NIPercent = 0
+elif grossWeellyPay >=166 and grossWeeklyPay <= 962:
+    NIPercent = 12
+print(NIPercent)
+
+#####
+#Tax Calculation
+########
 if grossSalaryInt <= 12500:
                  taxRate = 0.00
                  print('You have not reached your monthly allowance')
