@@ -59,10 +59,10 @@ if studentLoanPlan == 'A':
     print('PLAN A')
 elif studentLoanPlan == 'B':
     print('PLAN B')
-elif studentLoanPlan =='POST':
+elif studentLoanPlan == 'POST':
     print('POSTGRAD PLAN')
 else:
-    print('Sudent Loan')
+    print('No Sudent Loan')
 
 
 #taxcalculation
@@ -93,4 +93,4 @@ monthlyNetSalary = totalNetSalary / 12
 if salaried == 'YES':
     print('Your Total Net Salary: £'+str(float(round(monthlyNetSalary,2))))
 else:
-    print('Your Total Net Salary: £'+str())
+    print('Your Total Net Salary: £'+str(float(round())))
