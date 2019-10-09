@@ -91,8 +91,7 @@ else:
         SLDeductionAmount = ((grossSalaryInt / 100) * studentLoanDecuctionPercentage)/12
         print(SLDeductionAmount)
     print('Sudent Loan')
->>>>>>> NI
-
+    
 ######
 #N.I Calcs
 #########
@@ -119,9 +118,18 @@ elif grossSalaryInt >= 150000:
                  taxRate = 0.45
                  print('You are on Additonal Rate Tax (45%)')
 
+######
+#TaxCode Strings
+##########
 if taxCodeStr == 'BR':
-    deductableAmount = grossSalaryInt
-    print(deductableAmount)
+    taxRatePercent = 20
+elif taxCodeSTR =='D0':
+    taxRatePercent = 40
+elif taxCodeSTR =='D1':
+    taxRatePercent = 45
+elif taxCodeSTR =='NT':
+    taxRatePercent = 0
+elif taxCodeSTR '':
 else:
     deductableAmount = grossSalaryInt * taxRate
     print('Deductable Amount £'+str(float(round(deductableAmount,2)))+'0')
